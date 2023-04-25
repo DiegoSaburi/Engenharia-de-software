@@ -35,8 +35,17 @@ Esse Read me é baseado nos estudos da matéria de engenharia de software I da U
       - [Exemplo](#exemplo)
     - [Generalizacao](#generalizacao)
       - [Exemplo](#exemplo)
+- [Diagrama de sequencia](#diagrama-de-sequencia)
+  - [Objetos no diagrama de sequencia](#objetos-no-diagrama-de-sequencia)
+  - [Linhas de vida](#linhas-de-vida)
+  - [mensagens](#mensagens)
+    - [tipos de mensagens](#tipos-de-mensagens)
+  - [condicoes de guarda de mensagens](#condicoes-de-guarda-de-mensagens)
+    - [exemplo](#exemplo)
+    - [Loop](#loop)
+      - [exemplo](#exemplo)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+<small><i><a href='https://luciopaiva.com/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 
 # Introducao
@@ -236,3 +245,55 @@ Uma generalizacao é um relacionamento entre ***itens gerais (superclasse)*** e 
 #### Exemplo
 
 ![Generalizacao](diagrama_de_classe/generalização.png)
+
+# Diagrama de sequencia
+
+É um diagrama que representa o ***comportamento*** de um ***conjunto de objetos em um cenário de execução*** a partir das mensagens que são trocadas entre eles
+O diagrama é lido da ***esquerda para a direita e de cima para baixo***. Este exemplo resume o que tal diagrama possui:
+
+![Diagrama de sequencia](diagrama_de_sequencia/diagrama de sequência básico.png)
+
+## Objetos no diagrama de sequencia
+
+São apresentandos na ***dimensão horizontal do diagrama***
+
+A ***ordem n é considerada*** porém é bom ordenar de uma forma a facilitar a leitura
+
+Eles tbm por ter a sua classe determinada da seguinte forma: ***NomeDoObjeto:NomeDaClasse***
+
+## Linhas de vida
+
+São apresentadas na ***dimensão vertical do diagrama*** e representam o tempo de vida do objeto
+podem apresentar a ***ativação e desativação*** dos objetos.
+Possuem ***caixas de ativação*** que representam a ***execução de um método*** podendo ser empilhadas qnd represenatm uma chamada de um método no mesmo objeto
+
+## mensagens
+Os objetos interagem por meio de trocas de mensagens. Essas mensagens podem ser ,por exemplo, chamadas de métodos, criação de objetos, guard clauses etc
+São representadas por ***uma linha continua e com setas sólidas*** partindo do ***objeto solicitante*** para o ***objeto solicitado***.
+As mensagens são ***rotuladas*** com os nomes dos ***"estimulos"*** e seus ***argumentos***
+
+### tipos de mensagens
+
+- ***Chamada***:
+  - Invocação de uma operação de um objeto
+  - Invocação de um método da propria classe (criando assim outra caixa de ativação)
+- ***Retorno***:
+  - Representa o valor de retorno de uma chamada
+- ***criação***: Inicialização de um novo objeto, podendo ser representado por ***new()*** ou ***\<\<create>>***
+- ***destruição***: Destruição de um objeto instanciado, podendo ser representado por ***kill()*** ou ***\<\<destroy>>***
+
+## condicoes de guarda de mensagens
+tbm conhecidas como guard clauses, são ***condições para que uma mensagem é enviada***.
+
+São representadas entre colchetes(***\[Guard clause]***)
+
+### exemplo
+![Guard clause](diagrama_de_sequencia/guard clause.png)
+
+### Loop
+as guard closes podem inicar um ***looping***
+ele é representado por um ***retangulo*** com uma tag apresentando a ***condidação de execução do loop***
+
+#### exemplo
+
+![Guard clause com loop](diagrama_de_sequencia/guard clause com loop.png)
