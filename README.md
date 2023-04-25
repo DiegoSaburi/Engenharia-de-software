@@ -8,13 +8,13 @@ Esse Read me é baseado nos estudos da matéria de engenharia de software I da U
 - [Introducao](#introducao)
   - [O que se estuda em engenharia de software?](#o-que-se-estuda-em-engenharia-de-software)
   - [Engenharia de Requisitos](#engenharia-de-requisitos)
-    - [Requisitos funcionais:](#requisitos-funcionais)
-    - [Requisitos nao funcionais:](#requisitos-nao-funcionais)
+    - [Requisitos funcionais](#requisitos-funcionais)
+    - [Requisitos nao funcionais](#requisitos-nao-funcionais)
   - [Projeto de Software](#projeto-de-software)
-    - [Interfaces Providas:](#interfaces-providas)
-    - [Interfaces Requeridas:](#interfaces-requeridas)
+    - [Interfaces Providas](#interfaces-providas)
+    - [Interfaces Requeridas](#interfaces-requeridas)
     - [Exemplo](#exemplo)
-  - [Construção de Software](#construo-de-software)
+  - [Construcao de Software](#construcao-de-software)
   - [Testes de Software](#testes-de-software)
 - [Diagrama de classe](#diagrama-de-classe)
   - [Exemplo](#exemplo)
@@ -23,17 +23,17 @@ Esse Read me é baseado nos estudos da matéria de engenharia de software I da U
     - [Métodos](#mtodos)
     - [Exemplo](#exemplo)
   - [Relacionamentos](#relacionamentos)
-    - [Associação](#associao)
+    - [Associacao](#associacao)
       - [Exemplo:](#exemplo)
       - [Multiplicidade](#multiplicidade)
-    - [Agregação](#agregao)
+    - [Agregacao](#agregacao)
       - [Exemplo](#exemplo)
-    - [composição](#composio)
+    - [composicao](#composicao)
       - [Exemplo correto](#exemplo-correto)
       - [Exemplo Errado](#exemplo-errado)
     - [Dependência](#dependncia)
       - [Exemplo](#exemplo)
-    - [Generalização](#generalizao)
+    - [Generalizacao](#generalizacao)
       - [Exemplo](#exemplo)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
@@ -48,10 +48,10 @@ O [SWEBOK](https://www.computer.org/education/bodies-of-knowledge/software-engin
 
 1. Engenharia de Requisitos;
 2. Projeto de Software;
-3. Construção de Software;
+3. Construcao de Software;
 4. Testes de Software;
-5. Manutenção de Software;
-6. Gerência de Configuração;
+5. Manutencao de Software;
+6. Gerência de Configuracao;
 7. Gerência de Projetos;
 8. Processos de Software;
 9. Modelos de Software;
@@ -104,15 +104,15 @@ A classe **ContaBancaria** oferece uma interface para as demais classes do siste
 
 Por outro lado, podemos ver que ContaBancaria possui um atributo cujo tipo é **Cliente**, criando assim uma **dependência** da classe **ContaBancaria** para a classe **Cliente** (contaBancaria depende de Cliente). Portanto, a interface de Cliente é uma **interface requerida por ContaBancaria**
 
-Além disso, se pensarmos em um projeto em um nível mais alto cujas unidades de código possuem mais *granularidade* ele é classificado como um projeto arquitetural. Isso significa que a **Arquitetura de software** trata da organização de um sistema em um nível de abstração mais alto do que aquele que envolve classes ou construções semelhantes (organização de pastas, microserviços etc)
+Além disso, se pensarmos em um projeto em um nível mais alto cujas unidades de código possuem mais *granularidade* ele é classificado como um projeto arquitetural. Isso significa que a **Arquitetura de software** trata da organizacao de um sistema em um nível de abstracao mais alto do que aquele que envolve classes ou construções semelhantes (organizacao de pastas, microserviços etc)
 
-## Construção de Software
+## Construcao de Software
 
-Trata-se da *implementação* do sistema, isto é, criar o *código do sistema*. É nesse momento que implementamos o que não foi implementado na etapa de [Projeto de Software](#projeto-de-software). Pensamos nos algoritmos, estruturas de dados, quais frameworks utilizar, padrões de código e etc
+Trata-se da *implementacao* do sistema, isto é, criar o *código do sistema*. É nesse momento que implementamos o que não foi implementado na etapa de [Projeto de Software](#projeto-de-software). Pensamos nos algoritmos, estruturas de dados, quais frameworks utilizar, padrões de código e etc
 
 ## Testes de Software
 
-Consiste na execução de um programa com um conjunto finito de casos com o objetivo de verificar a integridade e o comportamento do mesmo.
+Consiste na execucao de um programa com um conjunto finito de casos com o objetivo de verificar a integridade e o comportamento do mesmo.
 
 # Diagrama de classe
 
@@ -152,22 +152,22 @@ Temos a classe *NomeDaClasse*:
 
 Autoexplicativo, são as setas que vão determinar o relacionamento entre cada classe do sistema. Tais setas de relacionamento devem possuir as seguintes caracteristicas:
 
-- ***Nome:*** é a descrição do q essa relação faz (contém, faz, busca)
-- ***sentido de leitura:*** qual é o sentido q ocorre essa relação, de forma a se entender qual classe é a agente desse relacionamento e qual é a receptora(a clase a contém a classe b) geralmente indicada por uma seta ao lado do nome indicando a direção
+- ***Nome:*** é a descricao do q essa relacao faz (contém, faz, busca)
+- ***sentido de leitura:*** qual é o sentido q ocorre essa relacao, de forma a se entender qual classe é a agente desse relacionamento e qual é a receptora(a clase a contém a classe b) geralmente indicada por uma seta ao lado do nome indicando a direcao
 - ***Navegabilidade:*** é indicada pela seta no fim do relacionamento representando os tipos de relacionamento()
 
-### Associação
+### Associacao
 
 é um ***relacionamento estrutural*** que indica que os objetos (atributos) de uma classe estão vinculados a objetos de outra classe
 É representada por uma ***linha sólida*** conectando tais classes.
 
-Geralmente essas associações são ***bidirecionais*** porém pode ser necessário especificar uma navegabilidade a essa relação por meio de uma seta nas extremidades da linha:
+Geralmente essas associações são ***bidirecionais*** porém pode ser necessário especificar uma navegabilidade a essa relacao por meio de uma seta nas extremidades da linha:
 #### Exemplo:
-![Associação com navegabilidade](diagrama_de_classe/Associação com Navegabilidade.png)
+![Associacao com navegabilidade](diagrama_de_classe/Associacao com Navegabilidade.png)
 
 Nesse exemplo vemos que PessoaFísica contem Endereco, porém Endereco n sabe quem é pessoa física.
 
-Importante salientar tbm que no exemplo ***o sentido de leitura não é o mesmo que a navegabilidade***. No sentido de leitura apenos vemos que um endereço pertence a uma pessoa física, o sentido de leitura ***não necessáriamente representa uma relação estrutural***
+Importante salientar tbm que no exemplo ***o sentido de leitura não é o mesmo que a navegabilidade***. No sentido de leitura apenos vemos que um endereço pertence a uma pessoa física, o sentido de leitura ***não necessáriamente representa uma relacao estrutural***
 
 #### Multiplicidade
 
@@ -178,34 +178,34 @@ São indicados com o número de intanscias possiveis em cima de cada terminal da
 - ***m...\*:*** Uma faixa de valores tendo um numero minimo exato porém um valor máximo muito alto ou infinito (0...\*, 3...\*)
 - ***\*:*** uma faixa de valores de 0 até um numero muito alto
 
-### Agregação
+### Agregacao
 
-É um tipo especial de associação onde se especifica um relacionamento do tipo "todo-parte".
+É um tipo especial de associacao onde se especifica um relacionamento do tipo "todo-parte".
 Tal relacionamento é representado por ***um losango vazado na extremidade que representa o todo***.
 Um objeto ***parte*** tbm pode fazer parte de vários objetos ***todo***
 
 #### Exemplo
 
-![agregação](diagrama_de_classe/agregação.png)
+![agregacao](diagrama_de_classe/agregacao.png)
 
 Importante salientar tbm que nesse caso uma instância de Pedido pode ter 1 ou mais instâncias de Item
 
-### composição
-É outro tipo especial de ***composição*** a qual ***um objeto parte*** só pode fazer parte de ***um objeto todo*** e tem sua vida útil coincidente com o dele (a parte só existe se e enquanto o todo existir).
+### composicao
+É outro tipo especial de ***composicao*** a qual ***um objeto parte*** só pode fazer parte de ***um objeto todo*** e tem sua vida útil coincidente com o dele (a parte só existe se e enquanto o todo existir).
 É representado por um ***logando preenchido*** na extremidade do ***todo***
-Como nesse caso de associação o objeto pertence a apenas uma instancia de outro objeto, então não faz sentido uma instancia da parte pertencer a mais de uma instancia de um todo (veja exemplo)
+Como nesse caso de associacao o objeto pertence a apenas uma instancia de outro objeto, então não faz sentido uma instancia da parte pertencer a mais de uma instancia de um todo (veja exemplo)
 
 #### Exemplo correto
 
-![Composição](diagrama_de_classe/Composição.png)
+![Composicao](diagrama_de_classe/Composicao.png)
 
 #### Exemplo Errado
 
-![Composição errada](diagrama_de_classe/Composição errada.png)
+![Composicao errada](diagrama_de_classe/Composicao errada.png)
 
 ### Dependência
 
-É um relacionamento onde a ***alteração de um item*** (o ***indenpendente***) pode afetar ***outro item*** (o ***dependente***).
+É um relacionamento onde a ***alteracao de um item*** (o ***indenpendente***) pode afetar ***outro item*** (o ***dependente***).
 É representado por ***uma linha tracejada*** com uma ***seta apontando para o item independente***
 
 #### Exemplo
@@ -222,17 +222,17 @@ class HelloWorld extends java.applet.Applet
 
 ```
 
-Vendo o código podemos ver que existe a seguinte relação de dependência:
+Vendo o código podemos ver que existe a seguinte relacao de dependência:
 
 ![Dependencia](diagrama_de_classe/dependencia.png)
 
-OBS.: A seta com triangulo vazio é representada por [Generalização](#Generalização)
+OBS.: A seta com triangulo vazio é representada por [Generalizacao](#Generalizacao)
 
-### Generalização
+### Generalizacao
 
-Uma generalização é um relacionamento entre ***itens gerais (superclasse)*** e ***itens mais específicos (subclasses)***.
+Uma generalizacao é um relacionamento entre ***itens gerais (superclasse)*** e ***itens mais específicos (subclasses)***.
 É representado por uma ***linha sólida*** com um ***triangulo vazio*** apontando para o item mais geral
 
 #### Exemplo
 
-![Generalização](diagrama_de_classe/generalização.png)
+![Generalizacao](diagrama_de_classe/generalizacao.png)
