@@ -3,21 +3,41 @@
 
 Esse Read me é baseado nos estudos da matéria de engenharia de software I da UFBA e no livro "Engenharia de Software Moderna" de Marco Tulio Valente
 
-# Table of Contents
+# Table of contents
 
 - [Introducao](#introducao)
-  * [O que se estuda em engenharia de software?](#o-que-se-estuda-em-engenharia-de-software-)
-  * [Engenharia de Requisitos](#engenharia-de-requisitos)
-    + [Requisitos funcionais:](#requisitos-funcionais-)
-    + [Requisitos nao funcionais:](#requisitos-nao-funcionais-)
-  * [Projeto de Software](#projeto-de-software)
-    + [Interfaces Providas:](#interfaces-providas-)
-    + [Interfaces Requeridas:](#interfaces-requeridas-)
-    + [Exemplo](#exemplo)
-  * [Construção de Software](#constru--o-de-software)
-  * [Testes de Software](#testes-de-software)
+  - [O que se estuda em engenharia de software?](#o-que-se-estuda-em-engenharia-de-software)
+  - [Engenharia de Requisitos](#engenharia-de-requisitos)
+    - [Requisitos funcionais:](#requisitos-funcionais)
+    - [Requisitos nao funcionais:](#requisitos-nao-funcionais)
+  - [Projeto de Software](#projeto-de-software)
+    - [Interfaces Providas:](#interfaces-providas)
+    - [Interfaces Requeridas:](#interfaces-requeridas)
+    - [Exemplo](#exemplo)
+  - [Construção de Software](#construo-de-software)
+  - [Testes de Software](#testes-de-software)
+- [Diagrama de classe](#diagrama-de-classe)
+  - [Exemplo](#exemplo)
+  - [Classes](#classes)
+    - [Atributos](#atributos)
+    - [Métodos](#mtodos)
+    - [Exemplo](#exemplo)
+  - [Relacionamentos](#relacionamentos)
+    - [Associação](#associao)
+      - [Exemplo:](#exemplo)
+      - [Multiplicidade](#multiplicidade)
+    - [Agregação](#agregao)
+      - [Exemplo](#exemplo)
+    - [composição](#composio)
+      - [Exemplo correto](#exemplo-correto)
+      - [Exemplo Errado](#exemplo-errado)
+    - [Dependência](#dependncia)
+      - [Exemplo](#exemplo)
+    - [Generalização](#generalizao)
+      - [Exemplo](#exemplo)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 # Introducao
 ## O que se estuda em engenharia de software?
@@ -43,11 +63,11 @@ O [SWEBOK](https://www.computer.org/education/bodies-of-knowledge/software-engin
 
 Os requisitos de um sistema definem o que ele deve fazer e como ele deve operar. Portanto, a Engenharia de Requisitos inclui o conjunto de atividades realizadas com o objetivo de definir, analisar, documentar e validar os requisito de um sistema. Tais requisitos podem ser definidos de duas maneiras:
 
-### Requisitos funcionais:
+### Requisitos funcionais
 
 Funcionalidades ou serviços que devem ser realizados pelo sistema (abordagem mais clara para o cliente ou usuário sobre o que o sistema faz)
 
-### Requisitos nao funcionais:
+### Requisitos nao funcionais
 
 Como o sistema deve operar para realizar tais serviçoes (são requisitos técnicos que geralmente não possuem uma abordagem muito clara para um leigo em tecnologia)
 
@@ -59,11 +79,11 @@ Ou seja, definiremos apenas as **assinaturas** das classes, métodos e atributos
 
 Tais **interfaces** podem ser definidas em 2 tipos:
 
-### Interfaces Providas:
+### Interfaces Providas
 
 Aqueles serviços que uma unidade de código torna **público para uso do sistema**
 
-### Interfaces Requeridas:
+### Interfaces Requeridas
 
 São interfaces que são **Requeridas por outras interfaces**, ou seja, que são utilizadas por outras interfaces
 
@@ -93,3 +113,126 @@ Trata-se da *implementação* do sistema, isto é, criar o *código do sistema*.
 ## Testes de Software
 
 Consiste na execução de um programa com um conjunto finito de casos com o objetivo de verificar a integridade e o comportamento do mesmo.
+
+# Diagrama de classe
+
+O diagrama de classe se trata de um diagrama em que se mostra as classes utilizadas no sistema e suas relações
+
+## Exemplo
+
+![Diagrama de classe do blog](AulaDia04-04/diagrama de classe do blog.png)
+
+## Classes
+
+são representadas por **Retangulos** incluindo seu **nome,atributos e métodos**
+
+### Atributos
+
+Representam o estado ou característica que a classe modela, para cada tipo de visibilidade (privada, publica e protegida) existe um símbolo a ser utilizado:
+
+- ***\+ publico:*** vísivel para qualquer classe do sistema
+- ***\# protegido:*** visível apenas para as classes do mesmo pacote
+- ***\- privado:*** visivel apenas dentro da própria classe
+
+### Métodos
+
+Representam o comportamento da classe, possuem os mesmos níveis de visibilidade que os [atributos](#Atributos)
+
+- ***\+ publico:*** vísivel para qualquer classe do sistema
+- ***\# protegido:*** visível apenas para as classes do mesmo pacote
+- ***\- privado:*** visivel apenas dentro da própria classe
+
+### Exemplo
+
+Temos a classe *NomeDaClasse*:
+
+![Classe UML](diagrama_de_classe/Classe UML.png)
+
+## Relacionamentos
+
+Autoexplicativo, são as setas que vão determinar o relacionamento entre cada classe do sistema. Tais setas de relacionamento devem possuir as seguintes caracteristicas:
+
+- ***Nome:*** é a descrição do q essa relação faz (contém, faz, busca)
+- ***sentido de leitura:*** qual é o sentido q ocorre essa relação, de forma a se entender qual classe é a agente desse relacionamento e qual é a receptora(a clase a contém a classe b) geralmente indicada por uma seta ao lado do nome indicando a direção
+- ***Navegabilidade:*** é indicada pela seta no fim do relacionamento representando os tipos de relacionamento()
+
+### Associação
+
+é um ***relacionamento estrutural*** que indica que os objetos (atributos) de uma classe estão vinculados a objetos de outra classe
+É representada por uma ***linha sólida*** conectando tais classes.
+
+Geralmente essas associações são ***bidirecionais*** porém pode ser necessário especificar uma navegabilidade a essa relação por meio de uma seta nas extremidades da linha:
+#### Exemplo:
+![Associação com navegabilidade](diagrama_de_classe/Associação com Navegabilidade.png)
+
+Nesse exemplo vemos que PessoaFísica contem Endereco, porém Endereco n sabe quem é pessoa física.
+
+Importante salientar tbm que no exemplo ***o sentido de leitura não é o mesmo que a navegabilidade***. No sentido de leitura apenos vemos que um endereço pertence a uma pessoa física, o sentido de leitura ***não necessáriamente representa uma relação estrutural***
+
+#### Multiplicidade
+
+É o ***número de instâncias*** de uma classe que se relacionam com ***uma instancia de outra classe***.
+São indicados com o número de intanscias possiveis em cima de cada terminal da linha de relacionamento
+- ***m:*** Um numero exato de instancias (1, 2, etc)
+- ***m...n:*** Uma faixa de valores (0...1, 1...7, etc)
+- ***m...\*:*** Uma faixa de valores tendo um numero minimo exato porém um valor máximo muito alto ou infinito (0...\*, 3...\*)
+- ***\*:*** uma faixa de valores de 0 até um numero muito alto
+
+### Agregação
+
+É um tipo especial de associação onde se especifica um relacionamento do tipo "todo-parte".
+Tal relacionamento é representado por ***um losango vazado na extremidade que representa o todo***.
+Um objeto ***parte*** tbm pode fazer parte de vários objetos ***todo***
+
+#### Exemplo
+
+![agregação](diagrama_de_classe/agregação.png)
+
+Importante salientar tbm que nesse caso uma instância de Pedido pode ter 1 ou mais instâncias de Item
+
+### composição
+É outro tipo especial de ***composição*** a qual ***um objeto parte*** só pode fazer parte de ***um objeto todo*** e tem sua vida útil coincidente com o dele (a parte só existe se e enquanto o todo existir).
+É representado por um ***logando preenchido*** na extremidade do ***todo***
+Como nesse caso de associação o objeto pertence a apenas uma instancia de outro objeto, então não faz sentido uma instancia da parte pertencer a mais de uma instancia de um todo (veja exemplo)
+
+#### Exemplo correto
+
+![Composição](diagrama_de_classe/Composição.png)
+
+#### Exemplo Errado
+
+![Composição errada](diagrama_de_classe/Composição errada.png)
+
+### Dependência
+
+É um relacionamento onde a ***alteração de um item*** (o ***indenpendente***) pode afetar ***outro item*** (o ***dependente***).
+É representado por ***uma linha tracejada*** com uma ***seta apontando para o item independente***
+
+#### Exemplo
+
+Tenha o seguinte trecho de código:
+```java
+Import java.awt.Graphics;
+class HelloWorld extends java.applet.Applet
+{
+    public void paint (Graphics g) {
+      g.drawString("Hello, world!",10, 10);
+    }
+}
+
+```
+
+Vendo o código podemos ver que existe a seguinte relação de dependência:
+
+![Dependencia](diagrama_de_classe/dependencia.png)
+
+OBS.: A seta com triangulo vazio é representada por [Generalização](#Generalização)
+
+### Generalização
+
+Uma generalização é um relacionamento entre ***itens gerais (superclasse)*** e ***itens mais específicos (subclasses)***.
+É representado por uma ***linha sólida*** com um ***triangulo vazio*** apontando para o item mais geral
+
+#### Exemplo
+
+![Generalização](diagrama_de_classe/generalização.png)
