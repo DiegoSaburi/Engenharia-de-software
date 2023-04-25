@@ -163,7 +163,7 @@ Autoexplicativo, são as setas que vão determinar o relacionamento entre cada c
 
 Geralmente essas associações são ***bidirecionais*** porém pode ser necessário especificar uma navegabilidade a essa relacao por meio de uma seta nas extremidades da linha:
 #### Exemplo:
-![Associacao com navegabilidade](diagrama_de_classe/Associacao com Navegabilidade.png)
+![Associacao com navegabilidade](diagrama_de_classe/Associação com Navegabilidade.png)
 
 Nesse exemplo vemos que PessoaFísica contem Endereco, porém Endereco n sabe quem é pessoa física.
 
@@ -186,7 +186,7 @@ Um objeto ***parte*** tbm pode fazer parte de vários objetos ***todo***
 
 #### Exemplo
 
-![agregacao](diagrama_de_classe/agregacao.png)
+![agregacao](diagrama_de_classe/agregação.png)
 
 Importante salientar tbm que nesse caso uma instância de Pedido pode ter 1 ou mais instâncias de Item
 
@@ -197,11 +197,11 @@ Como nesse caso de associacao o objeto pertence a apenas uma instancia de outro 
 
 #### Exemplo correto
 
-![Composicao](diagrama_de_classe/Composicao.png)
+![Composicao](diagrama_de_classe/Composição.png)
 
 #### Exemplo Errado
 
-![Composicao errada](diagrama_de_classe/Composicao errada.png)
+![Composicao errada](diagrama_de_classe/Composição errada.png)
 
 ### Dependência
 
@@ -235,4 +235,4 @@ Uma generalizacao é um relacionamento entre ***itens gerais (superclasse)*** e 
 
 #### Exemplo
 
-![Generalizacao](diagrama_de_classe/generalizacao.png)
+![Generalizacao](diagrama_de_classe/generalização.png)
