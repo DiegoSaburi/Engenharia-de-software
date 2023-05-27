@@ -297,3 +297,43 @@ ele é representado por um ***retangulo*** com uma tag apresentando a ***condida
 #### exemplo
 
 ![Guard clause com loop](diagrama_de_sequencia/guard clause com loop.png)
+
+# GRASP
+
+significa General Responsibility Assignment
+Software Patterns
+Escolher como distribuir as responsabilidades
+entre objetos (ou classes) é crucial para um bom
+projeto.
+
+Uma má distribuição leva a sistemas e
+componentes frágeis e difíceis de entender,
+manter, reusar e estender
+
+## Responsabilidades
+
+São as ***obrigações*** que um tipo ou uma classe tem
+
+### Granularidade
+Uma responsabilidade pode envolver um único método
+(ou poucos). Exemplo: Criar um item de uma Venda.
+
+Uma responsabilidade pode envolver dezenas de
+classes e métodos. Exemplo: Responsabilidade de fornecer acesso a um BD.
+
+Uma responsabilidade não é igual a um método. Mas
+métodos são usados para implementar responsabilidades
+
+# Expert
+
+Imagine o seguinte problema:
+
+> Qual é o princípio mais fundamental para atribuir responsabilidades?
+
+Para isso, teremos a seguinte solução:
+
+> Atribuir uma responsabilidade ao ***expert de
+informação***, ou seja, a classe que possui a ***informação
+necessária para preencher a responsabilidade.***
+
+
